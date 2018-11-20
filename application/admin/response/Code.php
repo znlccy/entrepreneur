@@ -14,4 +14,6 @@ class Code {
     const SUCCESS = 200;
 
     const FAILURE = 404;
+
+    const INVALID = 401;
 }

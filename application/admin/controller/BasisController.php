@@ -13,4 +13,18 @@ use think\Controller;
 
 class BasisController extends Controller {
 
+    public function returnMessage($code = 200, $message = '', $data = []) {
+        if (empty($data) || is_null($data)) {
+            return json([
+                'code'      => $code,
+                'message'   => $message
+            ]);
+        } else {
+            return json([
+                'code'      => $code,
+                'message'   => $message,
+                'data'      => $data
+            ]);
+        }
+    }
 }
